@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primartDarkCyan: hsl(158, 36%, 37%);
+    --primearyCream: hsl(30, 38%, 92%);
+    --neutralVeryDarkBlue: hsl(212, 21%, 14%);
+    --neutralDarkGrayishBlue: hsl(228, 12%, 48%);
+    --neutralWhite: hsl(0, 0%, 100%);
+}
+
+
+body {
+    height: calc(100vh - 1px);
+    background-color: var(--primearyCream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--neutralWhite);
+    width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px var(neutralWhite);
+}
+
+
+img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.details {
+    padding: 1.5rem;
+}
+
+.details__subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    color: var(--neutralDarkGrayishBlue);
+}
+
+
+.details__title {
+    margin: 10px 0px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1;
+    color: var(--neutralVeryDarkBlue);
+}
+
+.details__description {
+    font-weight: 500;
+    font-size: var(--fontSize);
+    color: var(--neutralDarkGrayishBlue);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+
+.details__price {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 15px;
+}
+
+.details__price--offer {
+    color: var(--primartDarkCyan);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.details__price--orginal {
+    text-decoration: line-through;
+    color: var(--neutralDarkGrayishBlue);
+}
+
+.details__cart--cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+    width: 100%;
+    background-color: var(--primartDarkCyan);
+    color: var(--neutralWhite);
+    border: none;
+    padding: 1rem 0;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.details__cart--cta:hover {
+    background-color: var(--neutralVeryDarkBlue);
+}
+
+.details__cart--cta>img {
+    height: 20px;
+    width: 20px;
+}
+
+
+@media only screen and (min-width: 600px) {
+    main {
+        flex-direction: row;
+        width: 530px
+    }
+
+    figure {
+        width: 50%;
+    }
+
+    .details {
+        width: 50%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .details__title{
+        font-size: 30px;
+    }
+
+    
+}
