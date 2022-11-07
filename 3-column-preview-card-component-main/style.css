@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --primarybrightorange: hsl(31, 77%, 52%);
+  --primarydarkcyan: hsl(184, 100%, 22%);
+  --primaryverydarkcyan: hsl(179, 100%, 13%);
+  /* (paragraphs) */
+  --neutraltransparentwhite: hsla(0, 0%, 100%, 0.75);
+  /* (background, headings, buttons) */
+  --neutralverylightgray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  font-family: "Big Shoulders Display", cursive;
+  background-color: var(--neutralverylightgray);
+  color: var(--neutraltransparentwhite);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+  border-radius: .6rem;
+  overflow: hidden;
+}
+
+li {
+  width: 27rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 2rem;
+}
+
+li > h2 {
+  font-weight: 700;
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: var(--neutralverylightgray);
+}
+
+li > img {
+  height: 70px;
+  width: 70px;
+  object-fit: contain;
+}
+
+li > button {
+  margin-top: 50px;
+  width: 60%;
+  padding: 1rem 0.5rem;
+  border-radius: 2rem;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-family: "Lexend Deca", sans-serif;
+  border: 2px solid transparent;
+  font-weight: 700;
+}
+
+li > p {
+  line-height: 1.5;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+li:nth-child(1) {
+  background-color: var(--primarybrightorange);
+}
+
+li:nth-child(2) {
+  background-color: var(--primarydarkcyan);
+}
+
+li:nth-child(3) {
+  background-color: var(--primaryverydarkcyan);
+}
+
+li:nth-child(1) > button {
+  color: var(--primarybrightorange);
+}
+
+li:nth-child(2) > button {
+  color: var(--primarydarkcyan);
+}
+
+li:nth-child(3) > button {
+  color: var(--primaryverydarkcyan);
+}
+
+li > button:hover {
+  color: white;
+  background-color: transparent;
+  border: 2px solid var(--neutraltransparentwhite);
+}
+
+@media (max-width: 800px) {
+  body {
+    height: 100%;
+  }
+
+  ul {
+    margin: 2rem;
+  }
+}
+
+
